@@ -1,0 +1,280 @@
+{
+  "luxuryBags": [
+    {
+      "name": "Balenciaga",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/46/95/65/19469565_50025805_1000.jpg",
+      "description": "medium Crush denim shoulder bag",
+      "color": "blue",
+      "price": 599.99,
+      "discountedPrice": 499.99,
+      "ratings": 4.8,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Burberry",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/23/39/02/20233902_50148329_1000.jpg",
+      "description": "Sling Vintage Check shoulder bag",
+      "price": 799.99,
+      "color": "brown",
+      "discountedPrice": 699.99,
+      "ratings": 4.9,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Prada Straw Bag",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/38/33/95/20383395_50422575_1000.jpg",
+      "description": "logo-plaque bucket bag",
+      "color": "white",
+      "price": 1299.99,
+      "discountedPrice": 1099.99,
+      "ratings": 4.7,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Prada",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/66/40/44/19664044_43931188_1000.jpg",
+      "description": "logo-knit gingham tote bag",
+      "color": "blue",
+      "price": 399.99,
+      "discountedPrice": 349.99,
+      "ratings": 4.6,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Gucci",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/05/34/18/20053418_45031807_1000.jpg",
+      "description": "Blondie logo-patch tote bag",
+      "color": "white",
+      "price": 899.99,
+      "discountedPrice": 799.99,
+      "ratings": 4.5,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Valentino Garavani",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/18/65/76/52/18657652_41118271_1000.jpg",
+      "description": "One Stud shoulder bag",
+      "color": "pink",
+      "price": 1599.99,
+      "discountedPrice": 1399.99,
+      "ratings": 4.7,
+
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Miu Miu",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/04/49/37/20044937_45062656_1000.jpg",
+      "description": "Matelassé leather mini bag",
+      "color": "black",
+      "price": 1599.99,
+      "discountedPrice": 1399.99,
+      "ratings": 4.7,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Versace Perl",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/06/59/86/20065986_50721894_1000.jpg",
+      "description": "large La Medusa embellished tote bag",
+      "color": "beige",
+      "price": 800.99,
+      "discountedPrice": 600.99,
+      "ratings": 3.9,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Miu Miu White Gold",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/24/22/33/20242233_50188167_1000.jpg",
+      "description": "Madras leather shoulder bag",
+      "color": "white",
+      "price": 1200.99,
+      "discountedPrice": 999.99,
+      "ratings": 4.8,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Gucci Cyan Silver",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/80/22/66/20802266_50690683_1000.jpg",
+      "description": "Matelassé leather mini bag",
+      "color": "blue",
+      "price": 1499.99,
+      "discountedPrice": 1299.99,
+      "ratings": 4.6,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Saint Laurent Strapless",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/69/92/13/20699213_50635726_1000.jpg",
+      "description": "Cassandre quilted leather clutch bag",
+      "color": "white",
+      "price": 1000.99,
+      "discountedPrice": 899.99,
+      "ratings": 4.4,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Balenciaga Heart",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/11/33/61/20113361_50152859_1000.jpg",
+      "description": "Le Cagole XS leather shoulder bag",
+      "price": 799.99,
+      "color": "pink",
+      "discountedPrice": 599.99,
+      "ratings": 4.8,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Prada Old School",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/92/18/32/19921832_44697029_1000.jpg",
+      "description": "Antique leather multi-pocket bag",
+      "price": 500.99,
+      "color": "black",
+      "discountedPrice": 399.99,
+      "ratings": 3.8,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Balenciaga Modern Rubber",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/13/20/15/20132015_50248026_1000.jpg",
+      "description": "Mary-Kate leather tote bag",
+      "price": 2599.99,
+      "color": "beige",
+      "discountedPrice": 2399.99,
+      "ratings": 4.7,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Balenciaga Black Butterfly",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/11/34/31/20113431_50567953_1000.jpg",
+      "description": "logo-plaque leather shoulder bag",
+      "price": 999.99,
+      "color": "black",
+      "discountedPrice": 799.99,
+      "ratings": 4.4,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Gucci Shiny Silver",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/46/39/52/20463952_50360322_1000.jpg",
+      "description": "Interlocking G tote bag",
+      "price": 2599.99,
+      "color": "white",
+      "discountedPrice": 2399.99,
+      "ratings": 4.2,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Saint Laurent Thin Strap",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/35/89/48/19358948_45010235_1000.jpg",
+      "description": "small Solferino shoulder bag",
+      "price": 599.99,
+      "color": "beige",
+      "discountedPrice": 399.99,
+      "ratings": 4.9,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Prada White Donut",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/66/40/35/19664035_43913412_1000.jpg",
+      "description": "padded nappa leather mini bag",
+      "price": 1299.99,
+      "color": "white",
+      "discountedPrice": 999.99,
+      "ratings": 3.6,
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Versace Gold Chain",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/06/64/75/20066475_50441317_1000.jpg",
+      "description": "small La Medusa tote bag",
+      "price": 2599.99,
+      "color": "pink",
+      "discountedPrice": 2399.99,
+      "ratings": 3.9,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Gucci Shoulder bag",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/49/82/32/19498232_43450797_480.jpg",
+      "description": "small Aphrodite shoulder bag",
+      "price": 1199.99,
+      "discountedPrice": 999.99,
+      "ratings": 4.8,
+      "color": "beige",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Saint Laurent Black Bow",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/35/55/76/19355576_43389750_480.jpg",
+      "description": "Le Rafia logo-embroided shoulder bag",
+      "price": 1799.99,
+      "discountedPrice": 1599.99,
+      "ratings": 3.9,
+      "color": "black",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Prada Old School Pink",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/92/35/59/19923559_44699631_480.jpg",
+      "description": "small leather tote bag",
+      "price": 899.99,
+      "discountedPrice": 599.99,
+      "ratings": 4.7,
+      "color": "pink",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Diesel Modern Ice",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/26/56/25/20265625_50433857_480.jpg",
+      "description": "1DR metallic-effect shoulder bag",
+      "price": 1599.99,
+      "discountedPrice": 1399.99,
+      "color": "blue",
+      "ratings": 4.7,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Balmain Embleme",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/71/99/00/19719900_50664045_480.jpg",
+      "description": "Embleme leather tote bag",
+      "price": 1299.99,
+      "discountedPrice": 1199.99,
+      "color": "white",
+      "ratings": 4.4,
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Gucci Old School Brown",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/14/57/57/73/14575773_22233700_480.jpg",
+      "description": "Gucci 1955 Horsebit shoulder bag",
+      "price": 2299.99,
+      "discountedPrice": 1999.99,
+      "ratings": 4.2,
+      "color": "brown",
+      "addToCart": false,
+      "discounted": true
+    }
+  ]
+}
