@@ -11,7 +11,7 @@ export default function Header({ setMenuOpen, menuOpen }) {
     textDecoration: "underline",
     color: "#161616",
   };
-  console.log(menuOpen);
+
   return (
     <header>
       <div className="header-main">

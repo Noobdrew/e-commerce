@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Products from "./components/Products";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Bags from "./Pages/Bags";
@@ -13,9 +13,21 @@ const BagContext = createContext();
 function App() {
   const bagData = data.luxuryBags;
   const bagDataReduced = bagData.slice(0, 10);
-  console.log(bagDataReduced);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
   return (
-    <BagContext.Provider value={{ bagData, bagDataReduced }}>
+    <BagContext.Provider value={{ bagData, bagDataReduced, windowSize }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -29,3 +41,4 @@ function App() {
 }
 
 export default App;
+export { BagContext };
