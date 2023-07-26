@@ -1,5 +1,8 @@
 export default function ({ bag }) {
   const style = { textDecoration: "line-through" };
+  function addToCart() {
+    alert(`${bag.name} added to cart`);
+  }
   return (
     <div className="bag-element">
       <img src={bag.imageUrl} alt="bag" className="bag-element-img" />
@@ -14,7 +17,9 @@ export default function ({ bag }) {
       ) : (
         <h3 className="bag-element-price only-price">${bag.price}</h3>
       )}
-      <button className="add-to-cart">Add to cart</button>
+      <button className="add-to-cart" onClick={addToCart}>
+        Add to cart
+      </button>
     </div>
   );
 }

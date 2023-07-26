@@ -2,7 +2,7 @@ import data from "./data.json";
 import "./App.css";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
-import Products from "./components/Products";
+
 import { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -12,7 +12,7 @@ import Shoes from "./Pages/Shoes";
 const BagContext = createContext();
 function App() {
   const bagData = data.luxuryBags;
-  const bagDataReduced = bagData.slice(0, 10);
+
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
     };
   }, []);
   return (
-    <BagContext.Provider value={{ bagData, bagDataReduced, windowSize }}>
+    <BagContext.Provider value={{ bagData, windowSize }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
