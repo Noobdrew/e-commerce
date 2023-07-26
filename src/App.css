@@ -1,42 +1,128 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  font-family: 'inter', sans-serif;
+  --main-white: #FEFCF3;
+  --dark-white: #F5EBE0;
+  --accent-light: #F0DBDB;
+  --accent-dark: #DBA39A;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--main-white);
+}
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  height: 50px;
+  padding: 5px 20px;
+  background-color: var(--dark-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-container {
+  left: 0;
+  top: 60px;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-white);
+  justify-content: start;
+  align-items: center;
+
+}
+
+.filter-color {
+  margin-top: 10px;
+  background-color: white;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-color-list {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter-color-list>li {
   text-align: center;
+  font-family: 'inter', sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  user-select: none;
+  background-color: var(--accent-light);
+  cursor: pointer;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.filter-color-list>li:hover {
+  background-color: var(--accent-dark);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-price {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 15px 0;
+  border-radius: 15px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.filter-price-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.filter-price-form>input {
+  text-align: center;
+  font-family: 'inter', sans-serif;
+  margin-bottom: 10px;
+  height: 25px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--dark-white);
+  width: 95%;
 }
 
-.read-the-docs {
-  color: #888;
+.filter-price-form>button {
+  width: 100%;
+  height: 30px;
+  font-family: 'inter', sans-serif;
+  background-color: var(--accent-light);
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.filter-price-form>button:hover {
+  background-color: var(--accent-dark);
+}
+
+.products-container {
+  height: 2000px;
 }
