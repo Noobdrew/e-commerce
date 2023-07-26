@@ -7,11 +7,22 @@ export default function Bags() {
   const bagCount = useRef(0);
   bagCount.current = 0;
 
-  const { bagData, bagDataReduced, windowSize } = useContext(BagContext);
-  const bagElement = bagDataReduced.map((bag) => {
+  const [displayedData, setDisplayedData] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(10);
+
+  useEffect(() => {
+    setDisplayedData(bagData.slice(0, visibleCount));
+  }, [visibleCount]);
+
+  const { bagData, windowSize } = useContext(BagContext);
+  const bagElement = displayedData.map((bag) => {
     bagCount.current++;
     return <BagElement key={bag.name} bag={bag} />;
   });
+
+  function loadMoreBags() {
+    setVisibleCount((prevCount) => prevCount + 10);
+  }
 
   return (
     <div className="bags-page">
@@ -24,6 +35,13 @@ export default function Bags() {
         {windowSize > 770 ? <Filter /> : ""}
         <div className="bag-container"> {bagElement}</div>
       </div>
+      {displayedData.length >= bagData.length ? (
+        <p style={{ marginTop: "20px" }}>no more bags</p>
+      ) : (
+        <button className="load-more" onClick={loadMoreBags}>
+          Load More
+        </button>
+      )}
     </div>
   );
 }
