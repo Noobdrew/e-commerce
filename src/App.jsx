@@ -15,7 +15,7 @@ function App() {
   const shoeData = data.shoes;
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [filter, setFilter] = useState([]);
+  const [filter, setFilter] = useState({});
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -28,7 +28,7 @@ function App() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
-
+  console.log(filter);
   return (
     <BagContext.Provider
       value={{ bagData, windowSize, shoeData, filter, setFilter }}

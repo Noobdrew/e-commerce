@@ -6,22 +6,50 @@ import Filter from "../components/Filter";
 export default function Bags() {
   const bagCount = useRef(0);
   bagCount.current = 0;
+  const { bagData, windowSize, filter } = useContext(BagContext);
+  const filteredData = applyFilter(bagData, filter);
 
   const [displayedData, setDisplayedData] = useState([]);
   const [visibleCount, setVisibleCount] = useState(10);
 
+  console.log(filteredData);
   useEffect(() => {
-    setDisplayedData(bagData.slice(0, visibleCount));
-  }, [visibleCount]);
+    setDisplayedData(filteredData.slice(0, visibleCount));
+  }, [visibleCount, filter]);
+  console.log(visibleCount);
+  function applyFilter(data, filter) {
+    return data.filter((item) => {
+      // Filter by colors if 'colors' array exists in the filter object
+      if (filter.colors && filter.colors.some((color) => color !== null)) {
+        if (!filter.colors.includes(item.color)) {
+          return false;
+        }
+      }
 
-  const { bagData, windowSize } = useContext(BagContext);
+      // Filter by price if 'price' property exists in the filter object
+      if (typeof filter.price !== "undefined") {
+        if (filter.price) {
+          if (item.discounted) {
+            if (item.discountedPrice > filter.price) {
+              return false;
+            }
+          } else if (item.price > filter.price) {
+            return false;
+          }
+        }
+      }
+      // All conditions passed, keep the item in the filtered result
+      return true;
+    });
+  }
+
   const bagElement = displayedData.map((bag) => {
     bagCount.current++;
     return <BagElement key={bag.name} bag={bag} />;
   });
 
   function loadMoreBags() {
-    setVisibleCount((prevCount) => prevCount + 10);
+    setVisibleCount((prev) => prev + 10);
   }
 
   return (
@@ -29,13 +57,13 @@ export default function Bags() {
       <h1>Luxury Bags </h1>
       <p className="bag-count">
         {" "}
-        {bagCount.current} bags out of {bagData.length}
+        {bagCount.current} bags out of {filteredData.length}
       </p>
       <div className="bag-main">
         {windowSize > 770 ? <Filter /> : ""}
         <div className="bag-container"> {bagElement}</div>
       </div>
-      {displayedData.length >= bagData.length ? (
+      {displayedData.length >= filteredData.length ? (
         <p style={{ marginTop: "20px" }}>no more bags</p>
       ) : (
         <button className="load-more" onClick={loadMoreBags}>

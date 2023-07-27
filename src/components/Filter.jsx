@@ -23,55 +23,6 @@ export default function Filter() {
     { t5: blue },
     { t6: brown },
   ];
-
-  function filterByConditions(array, conditions) {
-    const arr = [];
-    array.forEach((item) => {
-      for (let i = 0; i < conditions.length; i++) {
-        const condition = conditions[i];
-        const key = Object.keys(condition)[0];
-        const value = condition[key];
-        if (item.color == value) {
-          arr.push(item);
-        }
-      }
-    });
-    if (arr.length == 0) return array;
-    else return arr;
-  }
-  function filterByPrice(array) {
-    const arr = [];
-    if (!qPrice) {
-      return;
-    }
-    array.filter((item) => {
-      if (item.discounted) {
-        if (item.discountedPrice <= qPrice) {
-          arr.push(item);
-        }
-      } else {
-        if (item.price <= qPrice) {
-          arr.push(item);
-        }
-      }
-    });
-    if (arr.length == 0) return array;
-    else return arr;
-  }
-
-  //filterd by color
-  const filteredBagsColor = filterByConditions(bagData, condition);
-  const filteredShoesColor = filterByConditions(shoeData, condition);
-
-  //filter by price
-  const filteredBags = filterByPrice(filteredBagsColor);
-  const filteredShoes = filterByPrice(filteredShoesColor);
-
-  console.log(filteredBags);
-  useEffect(() => {
-    setFilter([filteredBags, filteredShoes]);
-  }, []);
-
   function handleFilter(key, value) {
     setSearchParams((prevParams) => {
       if (!prevParams.has(key)) {
@@ -79,6 +30,19 @@ export default function Filter() {
       } else {
         prevParams.delete(key);
       }
+      setFilter((prev) => {
+        return {
+          colors: [
+            searchParams.get("t1"),
+            searchParams.get("t2"),
+            searchParams.get("t3"),
+            searchParams.get("t4"),
+            searchParams.get("t5"),
+            searchParams.get("t6"),
+          ],
+          price: qPrice,
+        };
+      });
       return prevParams;
     });
   }
@@ -89,10 +53,26 @@ export default function Filter() {
       if (!prevParams.has("price")) {
         prevParams.append("price", price);
       }
+      setFilter((prev) => {
+        return {
+          colors: [
+            searchParams.get("t1"),
+            searchParams.get("t2"),
+            searchParams.get("t3"),
+            searchParams.get("t4"),
+            searchParams.get("t5"),
+            searchParams.get("t6"),
+          ],
+          price: price,
+        };
+      });
       return prevParams;
     });
   }
-  function clearFilters() {}
+  function clear() {
+    setFilter({ colors: [], price: NaN });
+  }
+
   function getFilerPrice(e) {
     setPrice(parseInt(e.target.value));
   }
@@ -178,7 +158,7 @@ export default function Filter() {
 
           <button>Filter</button>
           <br />
-          <button onClick={clearFilters}>
+          <button onClick={clear}>
             {" "}
             <Link
               relative="path"
