@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BagContext } from "../App";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function Filter() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -10,9 +10,9 @@ export default function Filter() {
   const pink = searchParams.get("t4");
   const blue = searchParams.get("t5");
   const brown = searchParams.get("t6");
+  const qPrice = parseInt(searchParams.get("price"));
 
-  const [minPrice, setMinPrice] = useState();
-  const [maxPrice, setMaxPrice] = useState();
+  const [price, setPrice] = useState(Infinity);
 
   const { filter, setFilter, bagData, shoeData } = useContext(BagContext);
   const condition = [
@@ -39,14 +39,35 @@ export default function Filter() {
     if (arr.length == 0) return array;
     else return arr;
   }
+  function filterByPrice(array) {
+    const arr = [];
+    if (!qPrice) {
+      return;
+    }
+    array.filter((item) => {
+      if (item.discounted) {
+        if (item.discountedPrice <= qPrice) {
+          arr.push(item);
+        }
+      } else {
+        if (item.price <= qPrice) {
+          arr.push(item);
+        }
+      }
+    });
+    if (arr.length == 0) return array;
+    else return arr;
+  }
 
   //filterd by color
-  const filteredBags = filterByConditions(bagData, condition);
-  const filteredShoes = filterByConditions(shoeData, condition);
-  console.log(filteredBags);
+  const filteredBagsColor = filterByConditions(bagData, condition);
+  const filteredShoesColor = filterByConditions(shoeData, condition);
 
   //filter by price
+  const filteredBags = filterByPrice(filteredBagsColor);
+  const filteredShoes = filterByPrice(filteredShoesColor);
 
+  console.log(filteredBags);
   useEffect(() => {
     setFilter([filteredBags, filteredShoes]);
   }, []);
@@ -61,11 +82,19 @@ export default function Filter() {
       return prevParams;
     });
   }
-  function filterByPrice() {}
-
+  function submitFilter(e) {
+    e.preventDefault();
+    setSearchParams((prevParams) => {
+      prevParams.delete("price");
+      if (!prevParams.has("price")) {
+        prevParams.append("price", price);
+      }
+      return prevParams;
+    });
+  }
+  function clearFilters() {}
   function getFilerPrice(e) {
-    setMinPrice(e.target.value);
-    setMaxPrice(e.target.value);
+    setPrice(parseInt(e.target.value));
   }
 
   return (
@@ -138,16 +167,27 @@ export default function Filter() {
       </div>
       <div className="filter-price">
         <h3>Price</h3>
-        <form action="" className="filter-price-form" onSubmit={filterByPrice}>
+        <form action="" className="filter-price-form" onSubmit={submitFilter}>
           <input
             type="number"
             name="price"
             id="filter-price"
-            placeholder="Set max price"
+            placeholder={qPrice ? qPrice : "Set max price"}
             onChange={getFilerPrice}
           />
 
           <button>Filter</button>
+          <br />
+          <button onClick={clearFilters}>
+            {" "}
+            <Link
+              relative="path"
+              to=""
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Clear Filters
+            </Link>
+          </button>
         </form>
       </div>
     </div>
