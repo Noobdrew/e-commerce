@@ -12,8 +12,10 @@ import Shoes from "./Pages/Shoes";
 const BagContext = createContext();
 function App() {
   const bagData = data.luxuryBags;
+  const shoeData = data.shoes;
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -26,8 +28,11 @@ function App() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
   return (
-    <BagContext.Provider value={{ bagData, windowSize }}>
+    <BagContext.Provider
+      value={{ bagData, windowSize, shoeData, filter, setFilter }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

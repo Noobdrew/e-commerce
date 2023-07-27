@@ -276,5 +276,18 @@
       "addToCart": false,
       "discounted": true
     }
+  ],
+  "shoes": [
+    {
+      "name": "Sneakers",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/14/57/57/73/14575773_22233700_480.jpg",
+      "description": "Gucci 1955 Horsebit shoulder bag",
+      "price": 2299.99,
+      "discountedPrice": 1999.99,
+      "ratings": 4.2,
+      "color": "brown",
+      "addToCart": false,
+      "discounted": true
+    }
   ]
 }

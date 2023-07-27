@@ -12,6 +12,13 @@ export default function Header({ setMenuOpen, menuOpen }) {
     color: "#161616",
   };
 
+  function getBagData() {
+    console.log("bag data");
+  }
+  function getShoeData() {
+    console.log("shoe data");
+  }
+
   return (
     <header>
       <div className="header-main">
@@ -31,12 +38,14 @@ export default function Header({ setMenuOpen, menuOpen }) {
         <NavLink
           to="."
           style={({ isActive }) => (isActive ? activeStyle : null)}
+          onClick={getBagData}
         >
           Bags
         </NavLink>
         <NavLink
           to="shoes"
           style={({ isActive }) => (isActive ? activeStyle : null)}
+          onClick={getShoeData}
         >
           Shoes
         </NavLink>
