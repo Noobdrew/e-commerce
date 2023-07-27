@@ -59,6 +59,7 @@ header {
   align-items: center;
   gap: 20px;
   justify-content: space-between;
+  box-shadow: 1px 1px 5px rgb(114, 114, 113);
 }
 
 .header-main {
@@ -86,15 +87,35 @@ nav>a {
   left: 0;
   top: 60px;
   width: 200px;
-  height: 100vh;
+  height: 90vh;
   padding: 20px;
+
   position: fixed;
   display: flex;
   flex-direction: column;
   background-color: var(--dark-white);
   justify-content: start;
   align-items: center;
+  overflow: auto;
+}
 
+.close-filter {
+  cursor: pointer;
+  left: 195px;
+  position: fixed;
+  top: 85px;
+  border: none;
+  width: 25px;
+  height: 25px;
+
+  font-size: 16px;
+  border-radius: 100%;
+  color: white;
+  background-color: var(--accent-dark);
+}
+
+.close-filter:hover {
+  background-color: #e77c6c;
 }
 
 .filter-color {
@@ -138,7 +159,7 @@ nav>a {
   background-color: white;
   padding: 15px 0;
   border-radius: 15px;
-
+  margin-bottom: 50px;
 }
 
 .filter-price-form {
@@ -205,6 +226,48 @@ nav>a {
   flex-wrap: wrap;
   gap: 20px 10px;
 
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 30px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(114, 114, 113);
+}
+
+.sort-button {
+
+  background-color: white;
+  height: 48px;
+  padding: 1px 10px;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(114, 114, 113);
+}
+
+.sort-button>p {
+  font-size: 13px;
+}
+
+.sort-button>select {
+  width: 100%;
+  height: 28px;
+  border: none;
+  font-family: 'inter', sans-serif;
+}
+
+.sorting-conteiner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 10px;
+  margin: 20px 0;
 }
 
 .bag-element {
@@ -298,7 +361,9 @@ nav>a {
   }
 
   .bags-page {
-    margin-left: 240px;
+
+    margin-left: 265px;
+
   }
 
   .bag-element {

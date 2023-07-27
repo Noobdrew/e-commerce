@@ -8,7 +8,7 @@ export default function Bags() {
   bagCount.current = 0;
   const { bagData, windowSize, filter } = useContext(BagContext);
   const filteredData = applyFilter(bagData, filter);
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const [displayedData, setDisplayedData] = useState([]);
   const [visibleCount, setVisibleCount] = useState(10);
 
@@ -51,14 +51,49 @@ export default function Bags() {
   function loadMoreBags() {
     setVisibleCount((prev) => prev + 10);
   }
-
+  function toggleMenu() {
+    setMenuOpen((prev) => !prev);
+  }
+  function closeFilter() {
+    setMenuOpen(false);
+  }
   return (
     <div className="bags-page">
+      {menuOpen ? (
+        <>
+          <Filter />{" "}
+          <button className="close-filter" onClick={closeFilter}>
+            X
+          </button>{" "}
+        </>
+      ) : (
+        ""
+      )}
       <h1>Luxury Bags </h1>
+
       <p className="bag-count">
         {" "}
         {bagCount.current} bags out of {filteredData.length}
       </p>
+      {windowSize < 770 ? (
+        <div className="sorting-conteiner">
+          <div className="filter-button" onClick={toggleMenu}>
+            Open Filter +
+          </div>
+          <div className="sort-button">
+            <p>Sort</p>
+            <select name="sort" id="sort">
+              <option value="Sort A-Z">Alphabetical A-Z</option>
+              <option value="Sort Z-A">Alphabetical Z-A</option>
+              <option value="Sort price ascending">Price Low-High</option>
+              <option value="Sort price descending">Price High-Low</option>
+            </select>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
       <div className="bag-main">
         {windowSize > 770 ? <Filter /> : ""}
         <div className="bag-container"> {bagElement}</div>

@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import burgerMenu from "../assets/burger-menu.svg";
 import user from "../assets/user.svg";
 import { NavLink } from "react-router-dom";
-export default function Header({ setMenuOpen, menuOpen }) {
-  function toggleMenu() {
-    setMenuOpen((prev) => !prev);
-  }
+export default function Header() {
   const activeStyle = {
     fontWeight: "bold",
     textDecoration: "underline",
@@ -27,10 +24,9 @@ export default function Header({ setMenuOpen, menuOpen }) {
           alt="side menu"
           width={"20px"}
           className="burger-menu"
-          onClick={toggleMenu}
         />
 
-        <h2 className="header-logo">LUXORBAG</h2>
+        <h2 className="header-logo">LUXOR</h2>
         <img src={user} alt="" width={"20px"} />
       </div>
 

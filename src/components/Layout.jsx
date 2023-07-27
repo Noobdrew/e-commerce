@@ -4,11 +4,10 @@ import Header from "./Header";
 
 import { Outlet } from "react-router-dom";
 export default function Layout() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="site-wrapper">
-      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      {menuOpen && <Filter />}
+      <Header />
+
       <main>
         <Outlet />
       </main>
