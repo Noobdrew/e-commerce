@@ -10,3 +10,7 @@ Header.jsx also has navlinks to bags and shoes pages
 The Bags page is in Bags.jsx in that file i set state to manage the Load more button and a ref to get the number of loaded bags
 Bags.jsx renders two elements a Filter and BagElement, filter is only loaded when screen width is over 770px
 Bags page changes ui if width is bigger than 770px
+created filter fuctionality can filter by mutiple colors and can filter by max price
+decided to use search queries from react router to create the filter
+it was challenging to know where to put the filtering functionality and how to manage the data
+it was also challenging to create the mutiple filtering functionality
