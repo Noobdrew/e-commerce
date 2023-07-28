@@ -132,7 +132,7 @@ export default function Bags() {
     <div className="bags-page">
       {menuOpen ? (
         <>
-          <Filter />{" "}
+          <Filter setMenuOpen={setMenuOpen} />{" "}
           <button className="close-filter" onClick={closeFilter}>
             X
           </button>{" "}

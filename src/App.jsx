@@ -16,7 +16,7 @@ function App() {
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [filter, setFilter] = useState({});
-
+  console.log(filter);
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);

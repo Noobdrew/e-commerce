@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { BagContext } from "../App";
 import { Link, useSearchParams } from "react-router-dom";
 
-export default function Filter() {
+export default function Filter({ setMenuOpen }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const white = searchParams.get("t1");
   const black = searchParams.get("t2");
@@ -12,7 +12,7 @@ export default function Filter() {
   const brown = searchParams.get("t6");
   const qPrice = parseInt(searchParams.get("price"));
 
-  const [price, setPrice] = useState(Infinity);
+  const [price, setPrice] = useState(NaN);
 
   const { filter, setFilter, bagData, shoeData } = useContext(BagContext);
   const condition = [
@@ -23,6 +23,7 @@ export default function Filter() {
     { t5: blue },
     { t6: brown },
   ];
+
   function handleFilter(key, value) {
     setSearchParams((prevParams) => {
       if (!prevParams.has(key)) {
@@ -48,10 +49,11 @@ export default function Filter() {
   }
   function submitFilter(e) {
     e.preventDefault();
+    console.log(qPrice);
     setSearchParams((prevParams) => {
       prevParams.delete("price");
       if (!prevParams.has("price")) {
-        prevParams.append("price", price);
+        prevParams.append("price", price || qPrice);
       }
       setFilter((prev) => {
         return {
@@ -63,9 +65,15 @@ export default function Filter() {
             searchParams.get("t5"),
             searchParams.get("t6"),
           ],
-          price: price,
+          price: price || qPrice,
         };
       });
+      try {
+        setMenuOpen(false);
+      } catch (err) {
+        console.log("Screen to large to close");
+      }
+
       return prevParams;
     });
   }
