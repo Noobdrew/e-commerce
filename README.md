@@ -14,3 +14,4 @@ created filter fuctionality can filter by mutiple colors and can filter by max p
 decided to use search queries from react router to create the filter
 it was challenging to know where to put the filtering functionality and how to manage the data
 it was also challenging to create the mutiple filtering functionality
+added sorting functionallity it was very difficult to fix filter being applied on every 2nd click , it was also challenging to create the sorting state and finding out how to implement it
