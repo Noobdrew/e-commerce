@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import burgerMenu from "../assets/burger-menu.svg";
 import user from "../assets/user.svg";
 import { NavLink } from "react-router-dom";
+import { BagContext } from "../App";
 export default function Header() {
   const activeStyle = {
     fontWeight: "bold",
     textDecoration: "underline",
     color: "#161616",
   };
-
+  const { setFilter } = useContext(BagContext);
   function getBagData() {
     console.log("bag data");
+    setFilter({ colors: [], price: NaN });
   }
   function getShoeData() {
     console.log("shoe data");
+    setFilter({ colors: [], price: NaN });
   }
 
   return (

@@ -28,7 +28,7 @@ function App() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
-  console.log(filter);
+
   return (
     <BagContext.Provider
       value={{ bagData, windowSize, shoeData, filter, setFilter }}

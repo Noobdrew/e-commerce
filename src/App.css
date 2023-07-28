@@ -176,11 +176,16 @@ nav>a {
   font-size: 20px;
   border-radius: 15px;
   border: 2px solid var(--dark-white);
-  width: 95%;
+  width: 180px;
 }
 
-.filter-price-form>button {
-  width: 100%;
+.filter-price-form>button,
+.filter-price-form>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 180px;
   height: 30px;
   font-family: 'inter', sans-serif;
   background-color: var(--accent-light);
@@ -189,7 +194,8 @@ nav>a {
   font-size: 20px;
 }
 
-.filter-price-form>button:hover {
+.filter-price-form>button:hover,
+.filter-price-form>a:hover {
   background-color: var(--accent-dark);
 }
 

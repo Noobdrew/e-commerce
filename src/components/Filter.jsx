@@ -158,16 +158,14 @@ export default function Filter() {
 
           <button>Filter</button>
           <br />
-          <button onClick={clear}>
-            {" "}
-            <Link
-              relative="path"
-              to=""
-              style={{ color: "black", textDecoration: "none" }}
-            >
-              Clear Filters
-            </Link>
-          </button>
+          <Link
+            onClick={clear}
+            relative="path"
+            to=""
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            Clear Filters
+          </Link>
         </form>
       </div>
     </div>
