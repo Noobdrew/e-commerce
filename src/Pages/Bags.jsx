@@ -144,7 +144,7 @@ export default function Bags() {
 
       <p className="bag-count">
         {" "}
-        {bagCount.current} bags out of {filteredData.length}
+        {bagCount.current} bags out of {sortedProducts.length}
       </p>
       <div className="sorting-conteiner">
         {windowSize < 770 ? (
@@ -173,7 +173,7 @@ export default function Bags() {
         {windowSize > 770 ? <Filter /> : ""}
         <div className="bag-container"> {bagElement}</div>
       </div>
-      {displayedData.length >= filteredData.length ? (
+      {displayedData.length >= sortedProducts.length ? (
         <p style={{ marginTop: "20px" }}>no more bags</p>
       ) : (
         <button className="load-more" onClick={loadMoreBags}>
