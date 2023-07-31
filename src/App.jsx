@@ -8,15 +8,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Bags from "./Pages/Bags";
 import Shoes from "./Pages/Shoes";
+import Popup from "./components/Popup";
 
 const BagContext = createContext();
 function App() {
   const bagData = data.luxuryBags;
   const shoeData = data.shoes;
+  const [addToCart, setAddToCart] = useState(false);
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [filter, setFilter] = useState({});
-  console.log(filter);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);
@@ -31,8 +33,17 @@ function App() {
 
   return (
     <BagContext.Provider
-      value={{ bagData, windowSize, shoeData, filter, setFilter }}
+      value={{
+        bagData,
+        windowSize,
+        shoeData,
+        filter,
+        setFilter,
+        addToCart,
+        setAddToCart,
+      }}
     >
+      <Popup trigger={addToCart} />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

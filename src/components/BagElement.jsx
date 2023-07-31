@@ -1,7 +1,15 @@
+import { useContext } from "react";
+import Popup from "./Popup";
+import { BagContext } from "../App";
+
 export default function ({ bag }) {
-  const style = { textDecoration: "line-through" };
-  function addToCart() {
-    alert(`${bag.name} added to cart`);
+  const { setAddToCart } = useContext(BagContext);
+  function ClickAddToCart() {
+    setAddToCart(true);
+    console.log("Added to cart: ", bag);
+    setTimeout(() => {
+      setAddToCart(false);
+    }, 3000);
   }
   return (
     <div className="bag-element">
@@ -17,7 +25,7 @@ export default function ({ bag }) {
       ) : (
         <h3 className="bag-element-price only-price">${bag.price}</h3>
       )}
-      <button className="add-to-cart" onClick={addToCart}>
+      <button className="add-to-cart" onClick={ClickAddToCart}>
         Add to cart
       </button>
     </div>
