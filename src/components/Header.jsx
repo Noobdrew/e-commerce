@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import burgerMenu from "../assets/burger-menu.svg";
-import user from "../assets/user.svg";
+import burgerMenu from "../assets/burger-menu.png";
+import user from "../assets/user.png";
 import { NavLink } from "react-router-dom";
 import { BagContext } from "../App";
 export default function Header() {

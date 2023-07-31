@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Popup from "./Popup";
 import { BagContext } from "../App";
-import star from "../assets/star-filled.svg";
+import star from "../assets/star-filled.png";
 
 export default function ({ bag }) {
   const { setAddToCart } = useContext(BagContext);

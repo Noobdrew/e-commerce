@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../assets/check-green.svg";
+import check from "../assets/check-green.png";
 
 export default function Popup(props) {
   return (
