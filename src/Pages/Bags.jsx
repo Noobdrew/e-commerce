@@ -174,7 +174,7 @@ export default function Bags() {
         <div className="bag-container"> {bagElement}</div>
       </div>
       {displayedData.length >= sortedProducts.length ? (
-        <p style={{ marginTop: "20px" }}>no more bags</p>
+        <p style={{ marginTop: "20px" }}>No more bags</p>
       ) : (
         <button className="load-more" onClick={loadMoreBags}>
           Load More

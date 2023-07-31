@@ -47,6 +47,7 @@ footer>a:visited {
 }
 
 header {
+  z-index: 1;
   left: 0;
   right: 0;
   top: 0;
@@ -84,6 +85,7 @@ nav>a {
 }
 
 .filter-container {
+  z-index: 1;
   left: 0;
   top: 60px;
   width: 200px;
@@ -100,6 +102,7 @@ nav>a {
 }
 
 .close-filter {
+  z-index: 1;
   cursor: pointer;
   left: 195px;
   position: fixed;
@@ -279,6 +282,7 @@ nav>a {
 }
 
 .bag-element {
+  position: relative;
   background-color: white;
   width: 150px;
   height: 300px;
@@ -292,8 +296,15 @@ nav>a {
 
 }
 
+.ratings {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
 .bag-element-img {
   width: 100px;
+
 
 }
 
@@ -357,6 +368,7 @@ nav>a {
 }
 
 .popup-container {
+  z-index: 1;
   position: fixed;
   top: 50px;
   left: 0;

@@ -279,15 +279,136 @@
   ],
   "shoes": [
     {
-      "name": "Sneakers",
-      "imageUrl": "https://cdn-images.farfetch-contents.com/14/57/57/73/14575773_22233700_480.jpg",
-      "description": "Gucci 1955 Horsebit shoulder bag",
-      "price": 2299.99,
-      "discountedPrice": 1999.99,
+      "name": "Birkenstock",
+      "imageUrl": "https://m.media-amazon.com/images/I/61B8p0vGJlL._AC_SR1840,1472_.jpg",
+      "description": "Bend - Leather (Unisex)",
+      "price": 150.99,
+      "discountedPrice": 99.99,
+      "ratings": 4.2,
+      "color": "white",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Birkenstock Sandal",
+      "imageUrl": "https://m.media-amazon.com/images/I/61-MHywwVtL._AC_SR1840,1472_.jpg",
+      "description": "Boston EVA (Women)",
+      "price": 50.0,
+      "discountedPrice": 39.99,
+      "ratings": 4.5,
+      "color": "black",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Madden Girl",
+      "imageUrl": "https://m.media-amazon.com/images/I/91AZnmMTr2L._AC_SR1840,1472_.jpg",
+      "description": "Tianna Black Goth",
+      "price": 70.0,
+      "discountedPrice": 59.99,
+      "ratings": 4.7,
+      "color": "black",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Naturalizer",
+      "imageUrl": "https://m.media-amazon.com/images/I/81QraOeiDOL._AC_SR1840,1472_.jpg",
+      "description": "Leesha Glue angel",
+      "price": 140.0,
+      "discountedPrice": 99.99,
+      "ratings": 4.3,
+      "color": "blue",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Dolce Vita",
+      "imageUrl": "https://m.media-amazon.com/images/I/81K7Qn69YTL._AC_SR1840,1472_.jpg",
+      "description": "Fynn Robertson Cowgirl",
+      "price": 199.99,
+      "discountedPrice": 149.99,
       "ratings": 4.2,
       "color": "brown",
       "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Sam Edelman",
+      "imageUrl": "https://m.media-amazon.com/images/I/81qf2GPO8pL._AC_SR1840,1472_.jpg",
+      "description": "Bianka Paradise Feather",
+      "price": 250.0,
+      "discountedPrice": 199.99,
+      "ratings": 4.2,
+      "color": "beige",
+      "addToCart": false,
       "discounted": true
+    },
+    {
+      "name": "Sam Edelman Silver Slipper",
+      "imageUrl": "https://m.media-amazon.com/images/I/71CgAaJ+iGL._AC_SR1840,1472_.jpg",
+      "description": "Fitzgerald The silver Goddes",
+      "price": 399.99,
+      "discountedPrice": 250.99,
+      "ratings": 4.8,
+      "color": "white",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "Birkenstock Strap Sandal",
+      "imageUrl": "https://m.media-amazon.com/images/I/71sYGKZ2TJL._AC_SR1840,1472_.jpg",
+      "description": "Arizona Big Buckle - Oiled Leather",
+      "price": 149.99,
+      "discountedPrice": 99.99,
+      "ratings": 4.8,
+      "color": "black",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Naturalizer Pink Mistique",
+      "imageUrl": "https://m.media-amazon.com/images/I/81QLzx9Bb+L._AC_SR1840,1472_.jpg",
+      "description": "Anna Geralt red carpet",
+      "price": 129.99,
+      "discountedPrice": 99.99,
+      "ratings": 4.2,
+      "color": "pink",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "COACH",
+      "imageUrl": "https://m.media-amazon.com/images/I/71UAGUzlmeL._AC_SR1840,1472_.jpg",
+      "description": "C201 Multi Signature",
+      "price": 195.0,
+      "discountedPrice": 140.0,
+      "ratings": 4.5,
+      "color": "white",
+      "addToCart": false,
+      "discounted": true
+    },
+    {
+      "name": "Superga",
+      "imageUrl": "https://m.media-amazon.com/images/I/61AIrQWGOtL._AC_SR1840,1472_.jpg",
+      "description": "2790 Nappa",
+      "price": 119.99,
+      "discountedPrice": 59.99,
+      "ratings": 4.8,
+      "color": "white",
+      "addToCart": false,
+      "discounted": false
+    },
+    {
+      "name": "COACH High Top",
+      "imageUrl": "https://m.media-amazon.com/images/I/71JytjLwSXL._AC_SR1840,1472_.jpg",
+      "description": "High-Top Suede",
+      "price": 275.75,
+      "discountedPrice": 200,
+      "ratings": 3.9,
+      "color": "pink",
+      "addToCart": false,
+      "discounted": false
     }
   ]
 }

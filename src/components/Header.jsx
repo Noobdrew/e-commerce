@@ -11,11 +11,9 @@ export default function Header() {
   };
   const { setFilter } = useContext(BagContext);
   function getBagData() {
-    console.log("bag data");
     setFilter({ colors: [], price: NaN });
   }
   function getShoeData() {
-    console.log("shoe data");
     setFilter({ colors: [], price: NaN });
   }
 
